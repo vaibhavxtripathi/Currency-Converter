@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Currency Exchange Rate</title>
+    <title>Currency Converter</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css"
         integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ=="
@@ -16,36 +16,41 @@
         <h6>Mini Project</h6>
         <h2>Currency Converter</h2>
         <form>
-        <div class="amount">
-            <p>Enter your amount</p>
+            <div class="amount">
+                <p>Enter your amount</p>
                 <input value="100">
-        </div>
-        <div class="dropdown">
-            <div class="from">
-                <p>From</p>
-                <div class="select">
-                    <img src="https://flagsapi.com/IN/flat/64.png">
-                    <select>
-                        <option>INR</option>
-                    </select>
+            </div>
+            <div class="dropdown">
+                <div class="from">
+                    <p>From</p>
+                    <div class="select">
+                        <img src="https://flagsapi.com/IN/flat/64.png">
+                        <select>
+                            <option>INR</option>
+                        </select>
+                    </div>
+                </div>
+                <i class="fa-solid fa-arrow-right-arrow-left"></i>
+                <div class="to">
+                    <p>To</p>
+                    <div class="select">
+                        <img src="https://flagsapi.com/US/flat/64.png">
+                        <select>
+                            <option>USD</option>
+                        </select>
+                    </div>
                 </div>
             </div>
-            <i class="fa-solid fa-arrow-right-arrow-left"></i>
-            <div class="to">
-                <p>To</p>
-                <div class="select">
-                    <img src="https://flagsapi.com/US/flat/64.png">
-                    <select>
-                        <option>USD</option>
-                    </select>
-                </div>
+            <div class="finalValue">
+                <p></p>
             </div>
-        </div>
-        <div class="finalValue">
-            <p></p>
-        </div>
-        <button class="btn">Convert</button>
+            <button class="btn">Convert</button>
         </form>
+    </div>
+    <div class="toggle">
+        <button class="toggleButton">
+            Dark Mode
+        </button>
     </div>
     <script src="countries.js"></script>
     <script src="script.js"></script>
