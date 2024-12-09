@@ -3,6 +3,33 @@ const select = document.querySelectorAll("select")
 const baseUrl = "https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies";
 const form = document.querySelectorAll("form")
 
+//Implementing dark mode logic
+function toggleModes(){
+    document.querySelector("body").classList.toggle("dark-mode")
+    document.querySelector(".container").classList.toggle("dark-mode-container")
+    document.querySelector(".dropdown").classList.toggle("dark-mode-dropdown")
+    document.querySelector(".amount p").classList.toggle("dark-mode-dropdown")
+    document.querySelector(".btn").classList.toggle("dark-mode-button")
+}
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const modeButton = document.querySelector(".toggleButton");
+    if (modeButton) {
+        modeButton.addEventListener("click", () => {
+            if (modeButton.innerText === "Dark Mode"){
+                modeButton.innerText = "Light Mode"
+            }
+            else{
+                modeButton.innerText = "Dark Mode"
+            }
+            
+            toggleModes();
+        });
+    }
+});
+
+
 for (let option of select) {
     for (country in countryList) {
         // console.log(country,countryList[country])
@@ -75,10 +102,9 @@ window.addEventListener("load", function convert() {
 
 form.addEventListener("keypress", (evtt) => {
     console.log(evtt.key);
-    if (evtt.key === 'Enter'){
+    if (evtt.key === 'Enter') {
         // evtt.preventDefault();
         form.submit();
     }
 })
-
 
